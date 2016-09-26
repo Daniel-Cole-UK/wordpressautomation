@@ -1,1 +1,1 @@
-An automation framework for testing the Wordpress dashboard written in C# and utilising Selenium WebDriver
+A black-box automated testing framework for the Wordpress dashboard written in C# and utilising Selenium WebDriver
