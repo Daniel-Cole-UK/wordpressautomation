@@ -1,0 +1,9 @@
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WordpressAutomation.dll
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WordpressAutomation.pdb
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WebDriver.dll
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WebDriver.Support.dll
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WebDriver.xml
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug\WebDriver.Support.xml
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\obj\Debug\WordpressAutomation.csprojResolveAssemblyReference.cache
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\obj\Debug\WordpressAutomation.dll
+c:\users\dan\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\obj\Debug\WordpressAutomation.pdb
