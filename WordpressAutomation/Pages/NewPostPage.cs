@@ -26,9 +26,8 @@ namespace WordpressAutomation
 
         public static void GoTo()
         {
-            Driver.Instance.FindElement(By.Id("menu-posts")).Click();
-
-            Driver.Instance.FindElement(By.LinkText("Add New")).Click();
+            // General menu navigation
+            LeftNavigation.Posts.AddNew.Select();
         }
 
         public static CreatePostCommand CreatePost(string title)
@@ -72,7 +71,7 @@ namespace WordpressAutomation
             Driver.Instance.SwitchTo().ActiveElement().SendKeys(body);
             Driver.Instance.SwitchTo().DefaultContent();
 
-            Thread.Sleep(5000);
+            Driver.Wait(TimeSpan.FromSeconds(3));
 
             Driver.Instance.FindElement(By.Id("publish")).Click();
         }
