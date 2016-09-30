@@ -13,7 +13,7 @@ namespace WordpressTests
             LoginPage.GoTo();
             LoginPage.LoginAs("admin").WithPassword("admin").Login();
         }
-
+       
         [TestCleanup]
         public void CleanUp()
         {

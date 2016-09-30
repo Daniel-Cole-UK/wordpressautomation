@@ -19,7 +19,7 @@ namespace WordpressAutomation
         public static void Initialize()
         {
             Instance = new ChromeDriver();
-            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            TurnOnWait();
             Instance.Manage().Window.Maximize();
         }
 
@@ -31,6 +31,23 @@ namespace WordpressAutomation
         public static void Wait(TimeSpan timeSpan)
         {
             Thread.Sleep((int) (timeSpan.TotalSeconds * 1000));
+        }
+
+        public static void NoWait(Action action)
+        {
+            TurnOffWait();
+            action();
+            TurnOnWait();
+        }
+
+        private static void TurnOnWait()
+        {
+            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+        }
+
+        private static void TurnOffWait()
+        {
+            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(0));
         }
     }
 }

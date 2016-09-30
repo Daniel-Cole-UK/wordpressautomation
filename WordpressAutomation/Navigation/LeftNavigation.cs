@@ -14,6 +14,14 @@ namespace WordpressAutomation
                     MenuSelector.Select("menu-posts", "Add New");
                 }
             }
+
+            public class AllPosts
+            {
+                public static void Select()
+                {
+                    MenuSelector.Select("menu-posts", "All Posts");
+                }
+            }
         }
 
         public class Pages
