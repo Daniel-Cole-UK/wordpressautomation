@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\DashboardPage.cs" />
+    <Compile Include="Pages\ListCommentsPage.cs" />
+    <Compile Include="Pages\PublishedPostsPage.cs" />
+    <Compile Include="Workflows\PostCreator.cs" />
     <Compile Include="Selenium\Driver.cs" />
     <Compile Include="Navigation\LeftNavigation.cs" />
     <Compile Include="Pages\ListPostsPage.cs" />

@@ -11,35 +11,37 @@ namespace WordpressAutomation
     public class NewPostPage
     {
         public static string Title {
-                    get
-                    {
-                        var title = Driver.Instance.FindElement(By.Id("title"));
-                        if (title != null)
-                        {
-                            return title.GetAttribute("value");
-                        } else
-                        {
-                            return string.Empty;
+                    get {
+                            var title = Driver.Instance.FindElement(By.Id("title"));
+                            if (title != null)
+                            {
+                                return title.GetAttribute("value");
+                            } else
+                            {
+                                return string.Empty;
+                            }
                         }
-                    }
                 }
 
+        // Method to go to add new post screen
         public static void GoTo()
         {
-            // General menu navigation
             LeftNavigation.Posts.AddNew.Select();
         }
 
+        // Method to return new instance of CreatePostCommand class
         public static CreatePostCommand CreatePost(string title)
         {
             return new CreatePostCommand(title);
         }
 
+        // Method to go to newly created post
         public static void GoToNewPost()
         {
             Driver.Instance.FindElement(By.Id("message")).FindElements(By.TagName("a"))[0].Click();
         }
 
+        // Method to check if post is in edit mode
         public static bool IsInEditMode()
         {
             var firstH1 = Driver.Instance.FindElements(By.TagName("H1"))[0].Text;
@@ -47,6 +49,7 @@ namespace WordpressAutomation
         }
     }
 
+    // Class to handle creation of posts
     public class CreatePostCommand
     {
         private string title;
@@ -70,9 +73,7 @@ namespace WordpressAutomation
             Driver.Instance.SwitchTo().Frame("content_ifr");
             Driver.Instance.SwitchTo().ActiveElement().SendKeys(body);
             Driver.Instance.SwitchTo().DefaultContent();
-
-            Driver.Wait(TimeSpan.FromSeconds(3));
-
+            Driver.Wait(TimeSpan.FromSeconds(2));
             Driver.Instance.FindElement(By.Id("publish")).Click();
         }
     }

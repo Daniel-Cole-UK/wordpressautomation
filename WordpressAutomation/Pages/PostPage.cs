@@ -9,6 +9,7 @@ namespace WordpressAutomation
 {
     public class PostPage
     {
+        // property to return title text of post
         public static string Title
         {
             get

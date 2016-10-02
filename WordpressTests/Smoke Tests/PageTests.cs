@@ -14,6 +14,7 @@ namespace WordpressTests
         [TestMethod]
         public void CanEditPage()
         {
+            // Select pre-existing "Sample Page" post and check it can be edited
             ListPostsPage.GoTo(PostType.Page);
             ListPostsPage.SelectPost("Sample Page");
 

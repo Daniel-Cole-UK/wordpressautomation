@@ -9,11 +9,11 @@ namespace WordpressAutomation
 {
     public class DashboardPage
     {
+        // Returns true if browser is at Dashboard page
         public static bool IsAt
         {
             get
             {
-                //Refactor: Can we create a generalised IsAt for all pages?
                 var h1s = Driver.Instance.FindElements(By.TagName("H1"));
                 if (h1s.Count > 0)
                 {

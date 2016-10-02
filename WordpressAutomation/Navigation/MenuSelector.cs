@@ -2,6 +2,7 @@
 
 namespace WordpressAutomation
 {
+    // Class for easy selection of left navigation buttons and submenus
     public class MenuSelector
     {
         public static void Select(string topLevelMenuId, string subMenuLinkText)

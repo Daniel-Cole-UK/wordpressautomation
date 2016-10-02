@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Comments Tests\CommentsTests.cs" />
     <Compile Include="Posts Tests\AllPostsTests.cs" />
     <Compile Include="Smoke Tests\CreatePostTests.cs" />
     <Compile Include="Smoke Tests\LoginTests.cs" />
@@ -63,6 +64,7 @@
       <Name>WordpressAutomation</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

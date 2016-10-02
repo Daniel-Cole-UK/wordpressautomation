@@ -11,6 +11,7 @@ namespace WordpressAutomation
 {
     public class LoginPage
     {
+        // Method to go to login page (using base URL)
         public static void GoTo()
         {
             Driver.Instance.Navigate().GoToUrl(Driver.BaseURL + "wp-login.php");
@@ -18,13 +19,14 @@ namespace WordpressAutomation
             wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "user_login");
         }
 
-
+        // Method to return new LogInCommand object
         public static LoginCommand LoginAs(string userName)
         {
             return new LoginCommand(userName);
         }
     }
 
+    // Class to handle login to dashboard
     public class LoginCommand
     {
         private string password;
@@ -34,7 +36,6 @@ namespace WordpressAutomation
         {
             this.userName = userName;
         }
-
 
         public LoginCommand WithPassword(string password)
         {
