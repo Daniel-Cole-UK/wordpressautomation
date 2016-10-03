@@ -31,6 +31,15 @@ namespace WordpressAutomation
             Instance.Close();
         }
 
+        // Method to click the browser back button a provided number of times
+        public static void GoBack(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                Instance.Navigate().Back();
+            }
+        }
+
         // Method to wait the current thread for provided time
         public static void Wait(TimeSpan timeSpan)
         {
@@ -55,15 +64,6 @@ namespace WordpressAutomation
         private static void TurnOffWait()
         {
             Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(0));
-        }
-
-        // Method to click the browser back button a provided number of times
-        public static void GoBack(int times)
-        {
-            for (int i = 0; i < times; i++)
-            {
-                Instance.Navigate().Back();
-            }
         }
     }
 }
